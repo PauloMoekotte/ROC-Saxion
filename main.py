@@ -10,8 +10,8 @@ st.title("📊 Monitor Doorstroom: ROC van Twente naar Saxion")
 st.markdown("""
 Deze applicatie analyseert de instroom in het Hoger Onderwijs vanuit het mbo. Upload de jaarlijkse 
 DUO-bestanden 'Herkomst ho-studenten' om de trends te actualiseren. 
-Die bestanden vind je (hier)[https://duo.nl/open_onderwijsdata/onderwijs-algemeen/leerlingen-en-studentenstromen/leerlingen-en-studentenstromen.jsp] en moet je eerst downloaden om ze te kunnen gebruken.
-Zie het (Stromenbestand herkomst ho-studenten)[https://duo.nl/open_onderwijsdata/images/herkomst-ho.pdf] voor een toelichting op de data. 
+Die bestanden vind je [hier](https://duo.nl/open_onderwijsdata/onderwijs-algemeen/leerlingen-en-studentenstromen/leerlingen-en-studentenstromen.jsp) en moet je eerst downloaden om ze te kunnen gebruken.
+Zie het [Stromenbestand herkomst ho-studenten](https://duo.nl/open_onderwijsdata/images/herkomst-ho.pdf) voor een toelichting op de data. 
 """)
 
 # Sidebar voor data upload
@@ -140,9 +140,10 @@ else:
     st.info("Upload CSV-bestanden in de zijbalk om de analyse te starten.")
     st.markdown("""
     **Instructies:**
-    1. Download de herkomstbestanden van DUO (2022 t/m 2024).
-    2. Sleep ze in de uploader in de zijbalk.
+    1. Download de herkomstbestanden van DUO (bijv. 2022 t/m 2024).
+    2. Sleep ze vanuit de downloadmap in de uploader in de zijbalk.
     3. De monitor herkent automatisch de jaren en instellingen.
+    4. Selecteer de instellingen (mbo en/of hbo) via de filteropties.
     """)
 
 # Footer
