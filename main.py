@@ -15,7 +15,7 @@ Zie het [Stromenbestand herkomst ho-studenten](https://duo.nl/open_onderwijsdata
 """)
 
 # Sidebar voor data upload
-st.sidebar.header("Data Management")
+st.sidebar.header("Datamanagement")
 uploaded_files = st.sidebar.file_uploader(
     "Upload DUO CSV bestanden (bijv. 2022, 2023, 2024)", 
     type="csv", 
@@ -128,7 +128,7 @@ if data is not None:
         st.subheader("Herkomst Onderwijssoort")
         herkomst_type = ho_subset.groupby(['Jaar', 'Herkomst onderwijssoort'])['Aantal'].sum().reset_index()
         fig_area = px.area(herkomst_type, x='Jaar', y='Aantal', color='Herkomst onderwijssoort',
-                           title="Directe vs. Indirecte Instroom trend")
+                           title="Directe vs. Indirecte instroom trend")
         fig_area.update_xaxes(dtick=1)
         st.plotly_chart(fig_area, use_container_width=True)
 
@@ -141,11 +141,11 @@ else:
     st.markdown("""
     **Instructies:**
     1. Download de herkomstbestanden van DUO (bijv. 2022 t/m 2024).
-    2. Sleep ze vanuit de downloadmap in de uploader in de zijbalk.
+    2. Sleep ze vanuit de downloadmap in de uploader in de zijbalk of gebruik de Browse files knop.
     3. De monitor herkent automatisch de jaren en instellingen.
     4. Selecteer de instellingen (mbo en/of hbo) via de filteropties.
     """)
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.caption("Ontwikkeld voor Data-analyse in het MBO")
+st.sidebar.caption("Ontwikkeld voor instroomanalyse in het HBO")
