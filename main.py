@@ -10,7 +10,7 @@ st.title("📊 Monitor Doorstroom: ROC van Twente naar Saxion")
 st.markdown("""
 Deze applicatie analyseert de instroom in het Hoger Onderwijs vanuit het mbo. Upload de jaarlijkse 
 DUO-bestanden 'Herkomst ho-studenten' om de trends te actualiseren. 
-Die bestanden vind je [hier](https://duo.nl/open_onderwijsdata/onderwijs-algemeen/leerlingen-en-studentenstromen/leerlingen-en-studentenstromen.jsp) en moet je eerst downloaden om ze te kunnen gebruken.
+Die bestanden vind je [hier](https://duo.nl/open_onderwijsdata/onderwijs-algemeen/leerlingen-en-studentenstromen/leerlingen-en-studentenstromen.jsp) en moet je eerst downloaden om ze te kunnen gebruiken.
 Zie het [Stromenbestand herkomst ho-studenten](https://duo.nl/open_onderwijsdata/images/herkomst-ho.pdf) voor een toelichting op de data. 
 """)
 
