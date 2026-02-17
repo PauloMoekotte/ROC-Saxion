@@ -27,16 +27,16 @@ def load_and_combine_data(files):
     all_data = []
     for file in files:
         try:
-            # DUO bestanden gebruiken vaak een puntkomma (;) of komma (,) afhankelijk van de export
-            # We proberen eerst met sep=None om het automatisch te detecteren
-            df = pd.read_csv(file, sep=None, engine='python')
+            # We voegen 'encoding' toe. 'iso-8859-1' is de standaard voor veel Nederlandse CSV's.
+            # Daarnaast dwingen we sep=';' af, wat de standaard is voor DUO exports.
+            df = pd.read_csv(file, sep=';', encoding='iso-8859-1')
             all_data.append(df)
         except Exception as e:
             st.error(f"Fout bij laden van {file.name}: {e}")
     
     if all_data:
         combined = pd.concat(all_data, ignore_index=True)
-        # Zorg dat 'Aantal' numeriek is en Jaar een integer
+        # Opschonen van de kolommen
         combined['Aantal'] = pd.to_numeric(combined['Aantal'], errors='coerce').fillna(0)
         combined['Jaar'] = pd.to_numeric(combined['Jaar'], errors='coerce').fillna(0).astype(int)
         return combined
